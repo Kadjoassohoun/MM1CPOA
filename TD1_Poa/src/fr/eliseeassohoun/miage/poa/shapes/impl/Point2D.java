@@ -23,17 +23,27 @@ public class Point2D {
 
     public Point2D(){
 
-        this(0,0);
+        x = 0.0;
+        y = 0.0;
     }
 
 
     public void translate( double xs, double ys)
     {
-        this.x += xs;
-        this.y += ys;
+        this.x = this.x + xs;
+        this.y = this.y + ys;
+
+    }
+
+    public double distance(Point2D d)
+    {
+        double dx = getX()-d.x;
+        double dy = getY()-d.y;
+
+        return Math.sqrt((dx * dx) + (dy * dy));
 
     }
 
 
-
 }
+
