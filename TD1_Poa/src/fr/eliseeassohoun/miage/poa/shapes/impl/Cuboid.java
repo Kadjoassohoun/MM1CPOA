@@ -12,8 +12,8 @@ public class Cuboid extends Shape3D {
     }
 
 
-    public Cuboid( double l, double h, double w)
-    {
+    public Cuboid( double l, double h, double w){
+
         this.height = h;
         this.length = l;
         this.width = w;
@@ -49,7 +49,15 @@ public class Cuboid extends Shape3D {
         this.width = width;
     }
 
+    public double volume()
+    {
+        return (height * width * length);
+    }
 
+    public double surface()
+    {
+        return ( 2 * height + 2 * length + 2 * width );
+    }
 
 
 }
